@@ -6,7 +6,8 @@ CONFIG -= qt
 SOURCES += \
     nest.cpp \
     matrix.cpp \
-    proj1_a.cpp
+    proj1_a.cpp \
+    proj1_b.cpp
 
 HEADERS += \
     matrix.hpp \

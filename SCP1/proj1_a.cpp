@@ -13,13 +13,18 @@ int factorial(int f)
     }
     return res;
 }
-int main()
+/*int main()
 {
     Nest n;
-    double data[4] = {2,-6,2,1};
+    double data[4] = {2,-6,2,-1};
     Matrix a(1,4,data);
     double ans = n.nest(a, 3);
     cout << ans << endl;
+
+    double dataw[4] = {6,-3,2,1};
+    Matrix aw(1,4,dataw);
+    double answ = n.nest(aw, 4);
+    cout << answ << endl;
 
     double data1[15] = {.1,2,.3,4,5,.6,7,8,9,10,11,12,13,14,15};
     Matrix b(1,15,data1);
@@ -72,9 +77,6 @@ int main()
         p4out << p4[k] << endl;
     }
     p4out.close();
-   // cout << p4 << endl;
-   // cout << "" << endl;
-   // cout << "" << endl;
 
     //calc p8 and write to file
     ofstream p8out("p8.txt", ios::out);
@@ -88,9 +90,6 @@ int main()
         p8out << p8[k] << endl;
     }
     p8out.close();
-    //cout << p8 << endl;
-    //cout << "" << endl;
-    //cout << "" << endl;
 
     //calc p12 and write to file
     ofstream p12out("p12.txt", ios::out);
@@ -104,9 +103,6 @@ int main()
         p12out << p12[k] << endl;
     }
     p12out.close();
-   // cout << p12 << endl;
-   // cout << "" << endl;
-   // cout << "" << endl;
 
     //calc f and write to file
     ofstream fout("f.txt", ios::out);
@@ -121,9 +117,7 @@ int main()
         fout << f[k] << endl;
     }
     fout.close();
-   // cout << f << endl;
-   // cout << "" << endl;
-   // cout << "" << endl;
+
 
     //calc err4 and write to file
     ofstream e4out("err4.txt", ios::out);
@@ -138,9 +132,6 @@ int main()
         e4out << err4[k] << endl;
     }
     e4out.close();
-   // cout << err4 << endl;
-   // cout << "" << endl;
-   // cout << "" << endl;
 
     //calc err8 and write to file
     ofstream e8out("err8.txt", ios::out);
@@ -154,9 +145,7 @@ int main()
         e8out << err8[k] << endl;
     }
     e8out.close();
-   // cout << err8 << endl;
-   // cout << "" << endl;
-   // cout << "" << endl;
+
 
     //calc err12 and write to file
     ofstream e12out("err12.txt", ios::out);
@@ -170,11 +159,8 @@ int main()
         e12out << err12[k] << endl;
     }
     e12out.close();
-   // cout << err12 << endl;
-   // cout << "" << endl;
-   // cout << "" << endl;
 
 
-}
+}*/
 
 

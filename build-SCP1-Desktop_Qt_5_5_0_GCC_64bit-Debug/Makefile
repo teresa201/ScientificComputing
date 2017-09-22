@@ -50,10 +50,12 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../SCP1/nest.cpp \
 		../SCP1/matrix.cpp \
-		../SCP1/proj1_a.cpp 
+		../SCP1/proj1_a.cpp \
+		../SCP1/proj1_b.cpp 
 OBJECTS       = nest.o \
 		matrix.o \
-		proj1_a.o
+		proj1_a.o \
+		proj1_b.o
 DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/unix.conf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/linux.conf \
@@ -155,7 +157,8 @@ DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../SCP1/SCP1.pro matrix.hpp \
 		nest.h ../SCP1/nest.cpp \
 		../SCP1/matrix.cpp \
-		../SCP1/proj1_a.cpp
+		../SCP1/proj1_a.cpp \
+		../SCP1/proj1_b.cpp
 QMAKE_TARGET  = SCP1
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = SCP1
@@ -435,6 +438,9 @@ matrix.o: ../SCP1/matrix.cpp ../SCP1/matrix.hpp
 proj1_a.o: ../SCP1/proj1_a.cpp ../SCP1/matrix.hpp \
 		../SCP1/nest.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o proj1_a.o ../SCP1/proj1_a.cpp
+
+proj1_b.o: ../SCP1/proj1_b.cpp ../SCP1/matrix.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o proj1_b.o ../SCP1/proj1_b.cpp
 
 ####### Install
 
