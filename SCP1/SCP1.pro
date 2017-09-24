@@ -7,7 +7,8 @@ SOURCES += \
     nest.cpp \
     matrix.cpp \
     proj1_a.cpp \
-    proj1_b.cpp
+    proj1_b.cpp \
+    proj1_c.cpp
 
 HEADERS += \
     matrix.hpp \

@@ -26,7 +26,7 @@ int main(){
     double fdprimex = -.25;
     double fofx = log(2);
     double eplison = pow(2, -52);
-    double c1 = abs(fdprimex/ 2 * fprimex);
+    double c1 = abs(fdprimex/ (2 * fprimex));
     double c2 = abs(fofx * eplison / fprimex);
     ofstream Rout("R.txt", ios::out);
     if(!Rout){
@@ -42,6 +42,7 @@ int main(){
 
     //calculate r and write to file
 
+    double symbol[52];
     ofstream rout("r.txt", ios::out);
     if(!rout){
        cout << "Unable to open file" << endl;
@@ -49,7 +50,8 @@ int main(){
     for(int k = 0; k < 52; k++)
     {
          double fdist = (log(2 + h[k]) - fofx) / h[k];
-         double rval = abs(fprimex - fdist / fprimex);
+         symbol[k] = fdist;
+         double rval = abs((fprimex - fdist )/ fprimex);
          r[k] = rval;
          rout << r[k] <<endl;
     }
