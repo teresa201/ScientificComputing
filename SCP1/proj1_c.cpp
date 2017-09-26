@@ -22,7 +22,7 @@ int main()
     printf("%1s %11s %15s \n", "j","V(j)", "V(j)/j!");
     printf("%-5d %-15f %-52f \n", 0,0,0);
 
-    ofstream jout("j.txt", ios::out);
+   /* ofstream jout("j.txt", ios::out);
     if(!jout){
        cout << "Unable to open file" << endl;
     }
@@ -32,23 +32,24 @@ int main()
     ofstream vout("bigv.txt", ios::out);
     if(!vout){
        cout << "Unable to open file" << endl;
-    }
-    ofstream overout("overf.txt", ios::out);
-    if(!overout){
+    }*/
+    ofstream t1out("table1.txt", ios::out);
+    if(!t1out){
        cout << "Unable to open file" << endl;
     }
     //print the first table of j, V(j), V(j)/j! for Vo = (1 - 1/e)
     for(int k = 1; k < 26; k++)
     {
         bigV[k] = 1 - k * bigV[k - 1];
-        vout << bigV[k] << endl;
+       // vout << bigV[k] << endl;
         double overfactorial = bigV[k] / factorial(k);
         overF[k] = overfactorial;
-        overout << overF[k] << endl;
+        t1out << k << bigV[k] << overfactorial << endl;
         printf("%-5d %-15f %-52f \n", k, bigV[k], overfactorial);
     }
-    vout.close();
-    overout.close();
+    //vout.close();
+    //overout.close();
+    t1out.close();
     cout << " " << endl;
     cout << "Modified Formula error = .13" << endl;
     cout << " " << endl;
