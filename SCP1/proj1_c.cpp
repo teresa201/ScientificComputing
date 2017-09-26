@@ -44,7 +44,7 @@ int main()
        // vout << bigV[k] << endl;
         double overfactorial = bigV[k] / factorial(k);
         overF[k] = overfactorial;
-        t1out << k << bigV[k] << overfactorial << endl;
+        t1out << k << ' ' << bigV[k] << ' ' << overfactorial << endl;
         printf("%-5d %-15f %-52f \n", k, bigV[k], overfactorial);
     }
     //vout.close();
