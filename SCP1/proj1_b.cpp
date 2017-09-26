@@ -22,9 +22,9 @@ int main(){
     }
 
     //calculate R and write to a file
-    double fprimex = .5;
-    double fdprimex = -.25;
-    double fofx = log(2);
+    double fprimex = 1/3.0;
+    double fdprimex = -1/9.0;
+    double fofx = log(3);
     double eplison = pow(2, -52);
     double c1 = abs(fdprimex/ (2 * fprimex));
     double c2 = abs(fofx * eplison / fprimex);
@@ -49,7 +49,7 @@ int main(){
     }
     for(int k = 0; k < 52; k++)
     {
-         double fdist = (log(2 + h[k]) - fofx) / h[k];
+         double fdist = (log(3 + h[k]) - fofx) / h[k];
          symbol[k] = fdist;
          double rval = abs((fprimex - fdist )/ fprimex);
          r[k] = rval;
