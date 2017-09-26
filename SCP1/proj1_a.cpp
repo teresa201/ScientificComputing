@@ -5,14 +5,14 @@
 #include "nest.h"
 using namespace std;
 
-int factorial(int f)
+/*int factorial(int f)
 {
     int res = 1;
     for(int k = f; f > 0; f--){
         res *= f;
     }
     return res;
-}
+}*/
 /*int main()
 {
     Nest n;
