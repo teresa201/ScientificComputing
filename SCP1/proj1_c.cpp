@@ -39,7 +39,7 @@ int main()
     double mbigV[25];
     double moverF[25];
     double error = .13;
-    double mv0 = 1 - (1/ exp(1) + error);
+    double mv0 = 1 - (1/ exp(1)) + error;
     mbigV[0] = mv0;
 
     ofstream t2out("table2.txt", ios::out);
@@ -61,7 +61,7 @@ int main()
     double m1bigV[25];
     double m1overF[25];
     double error1 = .0024;
-    double m1v0 = 1 - (1/ exp(1) + error1);
+    double m1v0 = 1 - (1/ exp(1)) + error1;
     m1bigV[0] = m1v0;
 
     ofstream t3out("table3.txt", ios::out);
@@ -83,7 +83,7 @@ int main()
     double m2bigV[25];
     double m2overF[25];
     double error2 = .000035;
-    double m2v0 = 1 - (1/ exp(1) + error2);
+    double m2v0 = 1 - (1/ exp(1))+ error2;
     m2bigV[0] = m2v0;
 
     ofstream t4out("table4.txt", ios::out);
