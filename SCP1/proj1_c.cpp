@@ -24,19 +24,15 @@ int main()
     if(!t1out){
        cout << "Unable to open file" << endl;
     }
-
+       t1out << 0 << ' ' << bigV[0] << ' ' << bigV[0] << endl;
     //print the first table of j, V(j), V(j)/j! for Vo = (1 - 1/e)
     for(int k = 1; k < 26; k++)
     {
         bigV[k] = 1 - k * bigV[k - 1];
-       // vout << bigV[k] << endl;
         double overfactorial = bigV[k] / factorial(k);
         overF[k] = overfactorial;
         t1out << k << ' ' << bigV[k] << ' ' << overfactorial << endl;
-       // printf("%-5d %-15f %-52f \n", k, bigV[k], overfactorial);
     }
-    //vout.close();
-    //overout.close();
     t1out.close();
 
     //print modifed formula error = .13
@@ -50,6 +46,7 @@ int main()
     if(!t2out){
        cout << "Unable to open file" << endl;
     }
+    t2out << 0 << ' ' << mbigV[0] << ' ' << mbigV[0] << endl;
 
     for(int k = 1; k < 26; k++)
     {
@@ -71,7 +68,7 @@ int main()
     if(!t3out){
        cout << "Unable to open file" << endl;
     }
-
+    t3out << 0 << ' ' << m1bigV[0] << ' ' << m1bigV[0] << endl;
     //print the table of j, V(j), V(j)/j! for Vo = (1 - 1/e + error)
     for(int k = 1; k < 25; k++)
     {
@@ -94,6 +91,7 @@ int main()
        cout << "Unable to open file" << endl;
     }
 
+    t4out << 0 << ' ' << m2bigV[0] << ' ' << m2bigV[0] << endl;
     //print the table of j, V(j), V(j)/j! for Vo = (1 - 1/e + error)
     for(int k = 1; k < 25; k++)
     {
