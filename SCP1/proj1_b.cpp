@@ -5,7 +5,7 @@
 
 using namespace std;
 
-/*int main(){
+int main(){
     cout << "Hello" << endl;
     double r[52];
     double bigR[52];
@@ -78,4 +78,4 @@ using namespace std;
         hout << h[k] << endl;
     }
     hout.close();
-}*/
+}
