@@ -58,8 +58,8 @@ int main()
     t2out.close();
 
     //print modifed formula error = .0024
-    double m1bigV[25];
-    double m1overF[25];
+    double m1bigV[26];
+    double m1overF[26];
     double error1 = .0024;
     double m1v0 = 1 - (1/ exp(1)) + error1;
     m1bigV[0] = m1v0;
@@ -70,7 +70,7 @@ int main()
     }
     t3out << 0 << ' ' << m1bigV[0] << ' ' << m1bigV[0] << endl;
     //print the table of j, V(j), V(j)/j! for Vo = (1 - 1/e + error)
-    for(int k = 1; k < 25; k++)
+    for(int k = 1; k < 26; k++)
     {
         m1bigV[k] = 1 - k * m1bigV[k - 1];
         double m1overfactorial = m1bigV[k] / factorial(k);
@@ -80,8 +80,8 @@ int main()
     t3out.close();
 
     //print modifed formula error = .000035
-    double m2bigV[25];
-    double m2overF[25];
+    double m2bigV[26];
+    double m2overF[26];
     double error2 = .000035;
     double m2v0 = 1 - (1/ exp(1))+ error2;
     m2bigV[0] = m2v0;
@@ -93,7 +93,7 @@ int main()
 
     t4out << 0 << ' ' << m2bigV[0] << ' ' << m2bigV[0] << endl;
     //print the table of j, V(j), V(j)/j! for Vo = (1 - 1/e + error)
-    for(int k = 1; k < 25; k++)
+    for(int k = 1; k < 26; k++)
     {
         m2bigV[k] = 1 - k * m2bigV[k - 1];
         double m2overfactorial = m2bigV[k] / factorial(k);
