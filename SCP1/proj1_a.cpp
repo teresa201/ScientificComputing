@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <cmath>
 #include <fstream>
 #include "matrix.hpp"
@@ -161,6 +161,6 @@ int main()
     e12out.close();
 
 
-}*/
+}
 
 

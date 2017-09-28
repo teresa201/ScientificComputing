@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <cmath>
 #include <fstream>
 #include "matrix.hpp"
@@ -6,7 +6,6 @@
 using namespace std;
 
 int main(){
-    cout << "Hello" << endl;
     double r[52];
     double bigR[52];
     int n[52];
@@ -78,4 +77,4 @@ int main(){
         hout << h[k] << endl;
     }
     hout.close();
-}*/
+}
