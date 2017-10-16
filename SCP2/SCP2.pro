@@ -8,8 +8,10 @@ SOURCES += \
     test_bisect.cpp \
     newton.cpp \
     test_newton.cpp \
-    kepler.cpp
+    kepler.cpp \
+    matrix.cpp
 
 HEADERS += \
-    fcn.hpp
+    fcn.hpp \
+    matrix.hpp
 

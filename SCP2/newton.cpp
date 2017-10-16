@@ -4,7 +4,7 @@
 #include <cmath>
 #include "fcn.hpp"
 
-using namespace std;
+/*using namespace std;
 
 
 
@@ -30,4 +30,4 @@ double newton(Fcn& f, Fcn& df, double x, int maxit, double tol, bool show_iterat
             return x;
         }
     }
-}
+}*/

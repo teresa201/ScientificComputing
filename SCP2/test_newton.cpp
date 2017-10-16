@@ -20,6 +20,8 @@ public:
   double operator()(double x, int y) {   // function evaluation
        return ((4*pow(x,3)) - (3*pow(x,2)) - (12*x));
   }
+  double operator()(double w, double e, double t){};
+  double operator()(double w, double e, int y){};
 };
 
 int main(int argc, char* argv[]) {
@@ -40,7 +42,6 @@ int main(int argc, char* argv[]) {
           int maxit = 50;
           bool show_iterates = true;
 
-          // call bisection to compute the root, and output result to screen
           cout << "X: " << x0 << " Tol: " << tol << endl;
           double sol = newton(f,df,x0,maxit,tol,show_iterates);
           cout << "Approximate root: " << setprecision(16) << sol << endl;
