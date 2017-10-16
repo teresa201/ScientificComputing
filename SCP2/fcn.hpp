@@ -17,7 +17,8 @@ public:
   // pure virtual function makes this an 'abstract' base class
   virtual double operator()(double x) = 0;
   virtual double operator()(double x, int y) = 0;
-
+  virtual double operator()(double w, double e, double t) = 0;
+  virtual double operator()(double w, double e, int y) = 0;
 };
 
 #endif  // FCN_DEFINED__

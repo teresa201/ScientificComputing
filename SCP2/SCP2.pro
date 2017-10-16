@@ -7,7 +7,8 @@ SOURCES += \
     bisection.cpp \
     test_bisect.cpp \
     newton.cpp \
-    test_newton.cpp
+    test_newton.cpp \
+    kepler.cpp
 
 HEADERS += \
     fcn.hpp

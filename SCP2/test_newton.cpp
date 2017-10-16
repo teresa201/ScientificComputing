@@ -6,7 +6,7 @@
 #include <cmath>
 #include "fcn.hpp"
 
-using namespace std;
+/*using namespace std;
 
 // Newton solver prototype
 double newton(Fcn& f, Fcn& df, double x, int maxit, double tol, bool show_iterates);
@@ -49,4 +49,4 @@ int main(int argc, char* argv[]) {
   }
 
 
-}
+}*/

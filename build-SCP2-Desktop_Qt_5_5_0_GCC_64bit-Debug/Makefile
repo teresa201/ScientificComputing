@@ -51,11 +51,13 @@ OBJECTS_DIR   = ./
 SOURCES       = ../SCP2/bisection.cpp \
 		../SCP2/test_bisect.cpp \
 		../SCP2/newton.cpp \
-		../SCP2/test_newton.cpp 
+		../SCP2/test_newton.cpp \
+		../SCP2/kepler.cpp 
 OBJECTS       = bisection.o \
 		test_bisect.o \
 		newton.o \
-		test_newton.o
+		test_newton.o \
+		kepler.o
 DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/unix.conf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/linux.conf \
@@ -157,7 +159,8 @@ DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../SCP2/SCP2.pro fcn.hpp ../SCP2/bisection.cpp \
 		../SCP2/test_bisect.cpp \
 		../SCP2/newton.cpp \
-		../SCP2/test_newton.cpp
+		../SCP2/test_newton.cpp \
+		../SCP2/kepler.cpp
 QMAKE_TARGET  = SCP2
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = SCP2
@@ -438,6 +441,9 @@ newton.o: ../SCP2/newton.cpp ../SCP2/fcn.hpp
 
 test_newton.o: ../SCP2/test_newton.cpp ../SCP2/fcn.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o test_newton.o ../SCP2/test_newton.cpp
+
+kepler.o: ../SCP2/kepler.cpp ../SCP2/fcn.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o kepler.o ../SCP2/kepler.cpp
 
 ####### Install
 
