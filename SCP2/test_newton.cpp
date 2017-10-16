@@ -5,11 +5,11 @@
 #include <iomanip>
 #include <cmath>
 #include "fcn.hpp"
-
-/*using namespace std;
+#include <fstream>
+using namespace std;
 
 // Newton solver prototype
-double newton(Fcn& f, Fcn& df, double x, int maxit, double tol, bool show_iterates);
+double newton(Fcn& f, Fcn& df, double x, int maxit, double tol, bool show_iterates, ofstream& nout);
 
 
 class fcn : public Fcn {
@@ -29,6 +29,10 @@ int main(int argc, char* argv[]) {
   // set the init values
 
   // create the function object
+    ofstream nout("n.txt", ios::out);
+    if(!nout){
+       cout << "Unable to open file" << endl;
+    }
   fcn f;
   fcn df;
   int a [3] = {-3, 1,2};
@@ -42,12 +46,12 @@ int main(int argc, char* argv[]) {
           int maxit = 50;
           bool show_iterates = true;
 
-          cout << "X: " << x0 << " Tol: " << tol << endl;
-          double sol = newton(f,df,x0,maxit,tol,show_iterates);
-          cout << "Approximate root: " << setprecision(16) << sol << endl;
-          cout << " " << endl;
+          nout << "Starting X: " << x0 << " Tolerance: " << tol << endl;
+          double sol = newton(f,df,x0,maxit,tol,show_iterates, nout);
+          nout << "Approximate root: " << setprecision(16) << sol << endl;
+          nout << " " << endl;
       }
   }
 
 
-}*/
+}
