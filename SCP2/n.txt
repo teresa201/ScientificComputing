@@ -1,0 +1,175 @@
+Starting X: -3 Tolerance: 0.1
+Iteration: 1
+ Solution Guess: -2.45455 Solution Update/Error: 0.545455 Residual: 54
+Iteration: 2
+ Solution Guess: -2.14186 Solution Update/Error: 0.312681 Residual: 14.9375
+Iteration: 3
+ Solution Guess: -2.01957 Solution Update/Error: 0.122291 Residual: 3.3464
+Iteration: 4
+ Solution Guess: -2.00045 Solution Update/Error: 0.0191283 Residual: 0.400736
+Approximate root: -2.000445372249027
+ 
+Starting X: -3 Tolerance: 1e-05
+Iteration: 1
+ Solution Guess: -2.454545454545455 Solution Update/Error: 0.5454545454545454 Residual: 54
+Iteration: 2
+ Solution Guess: -2.14186450492183 Solution Update/Error: 0.3126809496236247 Residual: 14.9375042688341
+Iteration: 3
+ Solution Guess: -2.019573666698127 Solution Update/Error: 0.1222908382237023 Residual: 3.346403936919049
+Iteration: 4
+ Solution Guess: -2.000445372249027 Solution Update/Error: 0.01912829444910028 Residual: 0.4007360560755335
+Iteration: 5
+ Solution Guess: -2.000000237852939 Solution Update/Error: 0.0004451343960875222 Residual: 0.00891220633022117
+Iteration: 6
+ Solution Guess: -2.000000000000068 Solution Update/Error: 2.378528712334647e-07 Residual: 4.757060140221873e-06
+Approximate root: -2.000000000000068
+ 
+Starting X: -3 Tolerance: 1e-09
+Iteration: 1
+ Solution Guess: -2.454545454545455 Solution Update/Error: 0.5454545454545454 Residual: 54
+Iteration: 2
+ Solution Guess: -2.14186450492183 Solution Update/Error: 0.3126809496236247 Residual: 14.9375042688341
+Iteration: 3
+ Solution Guess: -2.019573666698127 Solution Update/Error: 0.1222908382237023 Residual: 3.346403936919049
+Iteration: 4
+ Solution Guess: -2.000445372249027 Solution Update/Error: 0.01912829444910028 Residual: 0.4007360560755335
+Iteration: 5
+ Solution Guess: -2.000000237852939 Solution Update/Error: 0.0004451343960875222 Residual: 0.00891220633022117
+Iteration: 6
+ Solution Guess: -2.000000000000068 Solution Update/Error: 2.378528712334647e-07 Residual: 4.757060140221873e-06
+Iteration: 7
+ Solution Guess: -2 Solution Update/Error: 6.794564910705404e-14 Residual: 1.358912982141302e-12
+Approximate root: -2
+ 
+Starting X: 1 Tolerance: 0.1
+Iteration: 1
+ Solution Guess: 0.4545454545454546 Solution Update/Error: 0.5454545454545454 Residual: 6
+Iteration: 2
+ Solution Guess: 0.2280218133876671 Solution Update/Error: 0.2265236411577875 Residual: 1.290895430639984
+Iteration: 3
+ Solution Guess: 0.1151443723805495 Solution Update/Error: 0.1128774410071176 Residual: 0.3211160678862912
+Iteration: 4
+ Solution Guess: 0.05798728031262849 Solution Update/Error: 0.05715709206792097 Residual: 0.08090018854395466
+Approximate root: 0.05798728031262849
+ 
+Starting X: 1 Tolerance: 1e-05
+Iteration: 1
+ Solution Guess: 0.4545454545454546 Solution Update/Error: 0.5454545454545454 Residual: 6
+Iteration: 2
+ Solution Guess: 0.2280218133876671 Solution Update/Error: 0.2265236411577875 Residual: 1.290895430639984
+Iteration: 3
+ Solution Guess: 0.1151443723805495 Solution Update/Error: 0.1128774410071176 Residual: 0.3211160678862912
+Iteration: 4
+ Solution Guess: 0.05798728031262849 Solution Update/Error: 0.05715709206792097 Residual: 0.08090018854395466
+Iteration: 5
+ Solution Guess: 0.0291158618776915 Solution Update/Error: 0.02887141843493699 Residual: 0.0203588251571861
+Iteration: 6
+ Solution Guess: 0.01459096517001509 Solution Update/Error: 0.01452489670767641 Residual: 0.005110364314304082
+Iteration: 7
+ Solution Guess: 0.007304063706452316 Solution Update/Error: 0.007286901463562775 Residual: 0.00128043862471758
+Iteration: 8
+ Solution Guess: 0.003654218316781641 Solution Update/Error: 0.003649845389670675 Residual: 0.0003204829006411659
+Iteration: 9
+ Solution Guess: 0.001827660978382503 Solution Update/Error: 0.001826557338399138 Residual: 8.0168486644784e-05
+Iteration: 10
+ Solution Guess: 0.0009139690982886737 Solution Update/Error: 0.0009136918800938292 Residual: 2.004816177108477e-05
+Iteration: 11
+ Solution Guess: 0.0004570192834076485 Solution Update/Error: 0.0004569498148810252 Residual: 5.012799852468687e-06
+Iteration: 12
+ Solution Guess: 0.0002285183355325034 Solution Update/Error: 0.0002285009478751451 Residual: 1.253295164888847e-06
+Iteration: 13
+ Solution Guess: 0.0001142613425071697 Solution Update/Error: 0.0001142569930253337 Residual: 3.133357086916544e-07
+Iteration: 14
+ Solution Guess: 5.713121509933866e-05 Solution Update/Error: 5.7130127407831e-05 Residual: 7.833541793539239e-08
+Iteration: 15
+ Solution Guess: 2.856574353117682e-05 Solution Update/Error: 2.856547156816184e-05 Residual: 1.958404089660788e-08
+Iteration: 16
+ Solution Guess: 1.428290576347413e-05 Solution Update/Error: 1.428283776770269e-05 Residual: 4.896033529963347e-09
+Iteration: 17
+ Solution Guess: 7.141461381522113e-06 Solution Update/Error: 7.141444381952017e-06 Residual: 1.224011295980808e-09
+Approximate root: 7.141461381522113e-06
+ 
+Starting X: 1 Tolerance: 1e-09
+Iteration: 1
+ Solution Guess: 0.4545454545454546 Solution Update/Error: 0.5454545454545454 Residual: 6
+Iteration: 2
+ Solution Guess: 0.2280218133876671 Solution Update/Error: 0.2265236411577875 Residual: 1.290895430639984
+Iteration: 3
+ Solution Guess: 0.1151443723805495 Solution Update/Error: 0.1128774410071176 Residual: 0.3211160678862912
+Iteration: 4
+ Solution Guess: 0.05798728031262849 Solution Update/Error: 0.05715709206792097 Residual: 0.08090018854395466
+Iteration: 5
+ Solution Guess: 0.0291158618776915 Solution Update/Error: 0.02887141843493699 Residual: 0.0203588251571861
+Iteration: 6
+ Solution Guess: 0.01459096517001509 Solution Update/Error: 0.01452489670767641 Residual: 0.005110364314304082
+Iteration: 7
+ Solution Guess: 0.007304063706452316 Solution Update/Error: 0.007286901463562775 Residual: 0.00128043862471758
+Iteration: 8
+ Solution Guess: 0.003654218316781641 Solution Update/Error: 0.003649845389670675 Residual: 0.0003204829006411659
+Iteration: 9
+ Solution Guess: 0.001827660978382503 Solution Update/Error: 0.001826557338399138 Residual: 8.0168486644784e-05
+Iteration: 10
+ Solution Guess: 0.0009139690982886737 Solution Update/Error: 0.0009136918800938292 Residual: 2.004816177108477e-05
+Iteration: 11
+ Solution Guess: 0.0004570192834076485 Solution Update/Error: 0.0004569498148810252 Residual: 5.012799852468687e-06
+Iteration: 12
+ Solution Guess: 0.0002285183355325034 Solution Update/Error: 0.0002285009478751451 Residual: 1.253295164888847e-06
+Iteration: 13
+ Solution Guess: 0.0001142613425071697 Solution Update/Error: 0.0001142569930253337 Residual: 3.133357086916544e-07
+Iteration: 14
+ Solution Guess: 5.713121509933866e-05 Solution Update/Error: 5.7130127407831e-05 Residual: 7.833541793539239e-08
+Iteration: 15
+ Solution Guess: 2.856574353117682e-05 Solution Update/Error: 2.856547156816184e-05 Residual: 1.958404089660788e-08
+Iteration: 16
+ Solution Guess: 1.428290576347413e-05 Solution Update/Error: 1.428283776770269e-05 Residual: 4.896033529963347e-09
+Iteration: 17
+ Solution Guess: 7.141461381522113e-06 Solution Update/Error: 7.141444381952017e-06 Residual: 1.224011295980808e-09
+Iteration: 18
+ Solution Guess: 3.570732815746522e-06 Solution Update/Error: 3.570728565775591e-06 Residual: 3.06003188197921e-10
+Iteration: 19
+ Solution Guess: 1.785366939124528e-06 Solution Update/Error: 1.785365876621994e-06 Residual: 7.650084257584971e-11
+Iteration: 20
+ Solution Guess: 8.926836023756934e-07 Solution Update/Error: 8.926833367488348e-07 Residual: 1.912521633482296e-11
+Iteration: 21
+ Solution Guess: 4.463418343912806e-07 Solution Update/Error: 4.463417679844128e-07 Residual: 4.781304795067328e-12
+Iteration: 22
+ Solution Guess: 2.231709254965083e-07 Solution Update/Error: 2.231709088947722e-07 Residual: 1.195326287687282e-12
+Iteration: 23
+ Solution Guess: 1.115854648234724e-07 Solution Update/Error: 1.115854606730359e-07 Residual: 2.988315830368923e-13
+Iteration: 24
+ Solution Guess: 5.579273293054089e-08 Solution Update/Error: 5.579273189293148e-08 Residual: 7.470789714860806e-14
+Iteration: 25
+ Solution Guess: 2.789636659497164e-08 Solution Update/Error: 2.789636633556925e-08 Residual: 1.86769744608252e-14
+Iteration: 26
+ Solution Guess: 1.394818332991112e-08 Solution Update/Error: 1.394818326506052e-08 Residual: 4.669243636915453e-15
+Iteration: 27
+ Solution Guess: 6.974091673061886e-09 Solution Update/Error: 6.974091656849237e-09 Residual: 1.167310911942508e-15
+Iteration: 28
+ Solution Guess: 3.487045838557524e-09 Solution Update/Error: 3.487045834504362e-09 Residual: 2.918277283248324e-16
+Iteration: 29
+ Solution Guess: 1.743522919785408e-09 Solution Update/Error: 1.743522918772117e-09 Residual: 7.295693212360878e-17
+Iteration: 30
+ Solution Guess: 8.717614600193651e-10 Solution Update/Error: 8.717614597660427e-10 Residual: 1.823923303620229e-17
+Approximate root: 8.717614600193651e-10
+ 
+Starting X: 2 Tolerance: 0.1
+Iteration: 1
+ Solution Guess: -2 Solution Update/Error: 4 Residual: 16
+Iteration: 2
+ Solution Guess: -2 Solution Update/Error: 0 Residual: 0
+Approximate root: -2
+ 
+Starting X: 2 Tolerance: 1e-05
+Iteration: 1
+ Solution Guess: -2 Solution Update/Error: 4 Residual: 16
+Iteration: 2
+ Solution Guess: -2 Solution Update/Error: 0 Residual: 0
+Approximate root: -2
+ 
+Starting X: 2 Tolerance: 1e-09
+Iteration: 1
+ Solution Guess: -2 Solution Update/Error: 4 Residual: 16
+Iteration: 2
+ Solution Guess: -2 Solution Update/Error: 0 Residual: 0
+Approximate root: -2
+ 

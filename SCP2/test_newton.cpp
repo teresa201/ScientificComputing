@@ -47,9 +47,12 @@ int main(int argc, char* argv[]) {
           bool show_iterates = true;
 
           nout << "Starting X: " << x0 << " Tolerance: " << tol << endl;
+          cout << "Starting X: " << x0 << " Tolerance: " << tol << endl;
           double sol = newton(f,df,x0,maxit,tol,show_iterates, nout);
           nout << "Approximate root: " << setprecision(16) << sol << endl;
           nout << " " << endl;
+          cout << "Approximate root: " << setprecision(16) << sol << endl;
+          cout << " " << endl;
       }
   }
 

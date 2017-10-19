@@ -1,4 +1,4 @@
-/*#include <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
 #include <cmath>
@@ -10,9 +10,6 @@
 using namespace std;
 
 double kepler(){
-
-
-
 
 }
 
@@ -55,18 +52,14 @@ double newton(Fcn& f, Fcn& df, double x, int maxit, double tol,
 }
 int main(int argc, char* argv[]) {
 
-    //fcn kf;
-    //fcn dkf;
     double a = 2.0;
     double b = 1.25;
     double epislon = sqrt(1 - (pow(b,2)/pow(a,2)));
     Matrix t = Linspace(0,10,10001);
-   // cout << t;
     vector<double> time;
     for(int k = 0; k < t.Rows(); k++)
     {
         time.push_back(t(k,0));
-        //cout << time[k] << " ";
     }
     fcn kf;
     fcn dkf;
@@ -81,7 +74,6 @@ int main(int argc, char* argv[]) {
     {
        double sol = newton(kf,dkf,w,maxit,tol,show_iterates,epislon,time[k]);
        wsolutions.push_back(sol);
-      // cout << wsolutions[k] << " ";
        w = sol;
     }
 
@@ -137,4 +129,4 @@ int main(int argc, char* argv[]) {
 
 
 
-}*/
+}
