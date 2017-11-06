@@ -84,7 +84,7 @@ int main()
     }
     zout.close();
 
-    ofstream sout("t.txt", ios::out);
+    ofstream sout("s.txt", ios::out);
     if(!sout){
        cout << "Unable to open file" << endl;
     }
