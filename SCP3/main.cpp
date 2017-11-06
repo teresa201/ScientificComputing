@@ -84,6 +84,21 @@ int main()
     }
     zout.close();
 
+    ofstream sout("t.txt", ios::out);
+    if(!sout){
+       cout << "Unable to open file" << endl;
+    }
+    //Matrix t1 = Linspace(-3,3,201);
+    for(int k = 0; k < 201; k++)
+    {
+        double x = t(k,0);
+        double fx = 3.1 * pow(x,4) + 2.3 * pow(x,3) - 6.6 * pow(x,2) + 8.7 * x + 7.9;
+        double p4x = -4.7 + (-1.9)*(x+2) + 8.2*(x+2)*(x+1) + (-3.9)*(x+2)*(x+1)*(x) + 3.1*(x+2)*(x+1)*(x)*(x-1);
+        double result = fx - p4x;
+        sout << result << endl;
+    }
+    sout.close();
+
     ofstream tout("t.txt", ios::out);
     if(!tout){
        cout << "Unable to open file" << endl;
