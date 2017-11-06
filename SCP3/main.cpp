@@ -84,6 +84,19 @@ int main()
     }
     zout.close();
 
+    ofstream tout("t.txt", ios::out);
+    if(!tout){
+       cout << "Unable to open file" << endl;
+    }
+    Matrix t1 = Linspace(-3,3,201);
+    for(int k = 0; k < 201; k++)
+    {
+        double x = t1(k,0);
+        double result = -4.7 + (-1.9)*(x+2) + 8.2*(x+2)*(x+1) + (-3.9)*(x+2)*(x+1)*(x) + 3.1*(x+2)*(x+1)*(x)*(x-1);
+        tout << result << endl;
+    }
+    tout.close();
+
 
 
 }
