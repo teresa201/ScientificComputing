@@ -23,13 +23,10 @@ double Newton_nestedform(Matrix& a, Matrix&xnodes, double x){
 }
 
 Matrix Newton_coefficents(Matrix& xnodes, Matrix& ynodes){
-   // double avalues[xnodes.] = ynodes(0,0); // to start a0 = y0
-   // Matrix abegin(1,1,astart);
+
     int x = xnodes.Size();
     double* avalues = new double[x];
     avalues[0] = ynodes(0,0); //a0 = y0
-    //Matrix abegin(1,xnodes.Size(),avalues);
-
 
     //need to find 0 - k coefficents(if size is 4, k is 3)
     for(int k = 0; k < xnodes.Size()-1; k++ ){
@@ -45,8 +42,6 @@ Matrix Newton_coefficents(Matrix& xnodes, Matrix& ynodes){
 
 int main()
 {
-    cout << "Hello World!" << endl;
-    
    //test Newton Basis, answer should be 24
     double data[4] = {1,2,3,4};
     Matrix m(1,4,data);
@@ -64,6 +59,7 @@ int main()
     Matrix yv(1,3,y);
     cout << Newton_coefficents(xv,yv) << endl;
 
+    //test Newton coefficens
     double x1[5] = {-2,-1,0,1,2};
     Matrix xv1(1,5,x1);
 
@@ -71,6 +67,7 @@ int main()
     Matrix yv1(1,5,y1);
     cout << Newton_coefficents(xv1,yv1) << endl;
 
+    //write function values to a file for report
     ofstream zout("z.txt", ios::out);
     if(!zout){
        cout << "Unable to open file" << endl;
@@ -88,7 +85,6 @@ int main()
     if(!sout){
        cout << "Unable to open file" << endl;
     }
-    //Matrix t1 = Linspace(-3,3,201);
     for(int k = 0; k < 201; k++)
     {
         double x = t(k,0);

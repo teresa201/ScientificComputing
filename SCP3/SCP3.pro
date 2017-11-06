@@ -3,8 +3,9 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp \
-    matrix.cpp
+SOURCES += \
+    matrix.cpp \
+    test_Newton_test.cpp
 
 HEADERS += \
     matrix.hpp
