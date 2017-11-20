@@ -43,6 +43,7 @@ for (size_t k=0; k<nvals.size(); k++) {
   for (int i=0; i<401; i++)
     p(i) = Lagrange(x, y, z(i));
 
+  if(n == 10){
   ofstream fout("fofz.txt", ios::out);
   if(!fout){
      cout << "Unable to open file" << endl;
@@ -67,6 +68,33 @@ for (size_t k=0; k<nvals.size(); k++) {
   fout.close();
   pout.close();
   eout.close();
+  }
+  if(n == 20){
+  ofstream f2out("fofz2.txt", ios::out);
+  if(!f2out){
+     cout << "Unable to open file" << endl;
+  }
+  ofstream p2out("pz2.txt", ios::out);
+  if(!p2out){
+     cout << "Unable to open file" << endl;
+  }
+  ofstream e2out("err2.txt", ios::out);
+  if(!e2out){
+     cout << "Unable to open file" << endl;
+  }
+  // output errors at each point
+  cout << "      z        f(z)               p(z)             err\n";
+  for (int i=0; i<401; i++){
+    printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
+       z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
+  f2out << f(z(i)) << endl;
+  p2out << p(i) << endl;
+  e2out << fabs(f(z(i))-p(i)) << endl;
+  }
+  f2out.close();
+  p2out.close();
+  e2out.close();
+  }
 }
 
 
