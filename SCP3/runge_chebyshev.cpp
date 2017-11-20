@@ -29,10 +29,10 @@ for (size_t k=0; k<nvals.size(); k++) {
   int n = nvals[k];
   cout << endl << "interpolants and errors using " << n+1 << " nodes:\n";
 
- // Matrix z = Linspace(-5.0,5,401);
+
   // set arrays of nodes and data values
   double* xvalues = new double[n+1];
-  for(int k = 0; k < n; k++){
+  for(int k = 0; k <= n; k++){
       xvalues[k] = 5 * cos(((2*k + 1)* M_PI)/(2*n + 2));
   }
   Matrix x(1, n+1, xvalues);
@@ -42,8 +42,7 @@ for (size_t k=0; k<nvals.size(); k++) {
     y(i) = f(x(i));
 
   // set evaluation points z as 401 nodes
-  //double dx = 1.0/n;                   // set node spacing
- // Matrix z = Linspace(dx/2.0, 1.0-dx/2.0, 401, 1);
+
   Matrix z = Linspace(-5.0,5,401);
  /* double* zvalues = new double[n+1];
   for(int k = 0; k < n; k++){
