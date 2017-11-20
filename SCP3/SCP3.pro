@@ -5,7 +5,10 @@ CONFIG -= qt
 
 SOURCES += \
     matrix.cpp \
-    test_Newton_test.cpp
+    test_Newton_test.cpp \
+    Lagrange.cpp \
+    test_Lagrange.cpp \
+    interpolation_degree.cpp
 
 HEADERS += \
     matrix.hpp

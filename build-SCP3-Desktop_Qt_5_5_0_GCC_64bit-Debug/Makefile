@@ -48,10 +48,16 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../SCP3/main.cpp \
-		../SCP3/matrix.cpp 
-OBJECTS       = main.o \
-		matrix.o
+SOURCES       = ../SCP3/matrix.cpp \
+		../SCP3/test_Newton_test.cpp \
+		../SCP3/Lagrange.cpp \
+		../SCP3/test_Lagrange.cpp \
+		../SCP3/interpolation_degree.cpp 
+OBJECTS       = matrix.o \
+		test_Newton_test.o \
+		Lagrange.o \
+		test_Lagrange.o \
+		interpolation_degree.o
 DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/unix.conf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/linux.conf \
@@ -150,8 +156,11 @@ DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/features/exceptions.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/features/yacc.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/features/lex.prf \
-		../SCP3/SCP3.pro matrix.hpp ../SCP3/main.cpp \
-		../SCP3/matrix.cpp
+		../SCP3/SCP3.pro matrix.hpp ../SCP3/matrix.cpp \
+		../SCP3/test_Newton_test.cpp \
+		../SCP3/Lagrange.cpp \
+		../SCP3/test_Lagrange.cpp \
+		../SCP3/interpolation_degree.cpp
 QMAKE_TARGET  = SCP3
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = SCP3
@@ -421,11 +430,20 @@ compiler_clean:
 
 ####### Compile
 
-main.o: ../SCP3/main.cpp ../SCP3/matrix.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../SCP3/main.cpp
-
 matrix.o: ../SCP3/matrix.cpp ../SCP3/matrix.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o matrix.o ../SCP3/matrix.cpp
+
+test_Newton_test.o: ../SCP3/test_Newton_test.cpp ../SCP3/matrix.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o test_Newton_test.o ../SCP3/test_Newton_test.cpp
+
+Lagrange.o: ../SCP3/Lagrange.cpp ../SCP3/matrix.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o Lagrange.o ../SCP3/Lagrange.cpp
+
+test_Lagrange.o: ../SCP3/test_Lagrange.cpp ../SCP3/matrix.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o test_Lagrange.o ../SCP3/test_Lagrange.cpp
+
+interpolation_degree.o: ../SCP3/interpolation_degree.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o interpolation_degree.o ../SCP3/interpolation_degree.cpp
 
 ####### Install
 
