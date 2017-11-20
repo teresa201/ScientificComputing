@@ -12,7 +12,7 @@ using namespace std;
 // function prototypes
 double Lagrange(Matrix& x, Matrix& y, double z);
 inline double f(double x){
-  return ((x));
+  return (sin(x));
 };
 
 int main(){
