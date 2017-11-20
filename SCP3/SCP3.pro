@@ -8,7 +8,8 @@ SOURCES += \
     test_Newton_test.cpp \
     Lagrange.cpp \
     test_Lagrange.cpp \
-    interpolation_degree.cpp
+    interpolation_degree.cpp \
+    runge_uniform.cpp
 
 HEADERS += \
     matrix.hpp

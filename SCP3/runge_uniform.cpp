@@ -1,4 +1,6 @@
 
+
+
 // Inclusions
 #include <stdlib.h>
 #include <stdio.h>
@@ -12,10 +14,10 @@ using namespace std;
 // function prototypes
 double Lagrange(Matrix& x, Matrix& y, double z);
 inline double f(double x){
-  return (sin(x));
+  return (1/(1 + x*x));
 };
 
-/*int main(){
+int main(){
 // array of n values for testing
 vector<size_t> nvals = {10, 20};
 
@@ -44,15 +46,15 @@ for (size_t k=0; k<nvals.size(); k++) {
     p(i) = Lagrange(x, y, z(i));
 
   if(n == 10){
-  ofstream fout("fofz.txt", ios::out);
+  ofstream fout("rfofz.txt", ios::out);
   if(!fout){
      cout << "Unable to open file" << endl;
   }
-  ofstream pout("pz.txt", ios::out);
+  ofstream pout("rpz.txt", ios::out);
   if(!pout){
      cout << "Unable to open file" << endl;
   }
-  ofstream eout("err.txt", ios::out);
+  ofstream eout("rerr.txt", ios::out);
   if(!eout){
      cout << "Unable to open file" << endl;
   }
@@ -70,15 +72,15 @@ for (size_t k=0; k<nvals.size(); k++) {
   eout.close();
   }
   if(n == 20){
-  ofstream f2out("fofz2.txt", ios::out);
+  ofstream f2out("rfofz2.txt", ios::out);
   if(!f2out){
      cout << "Unable to open file" << endl;
   }
-  ofstream p2out("pz2.txt", ios::out);
+  ofstream p2out("rpz2.txt", ios::out);
   if(!p2out){
      cout << "Unable to open file" << endl;
   }
-  ofstream e2out("err2.txt", ios::out);
+  ofstream e2out("rerr2.txt", ios::out);
   if(!e2out){
      cout << "Unable to open file" << endl;
   }
@@ -96,10 +98,4 @@ for (size_t k=0; k<nvals.size(); k++) {
   e2out.close();
   }
 }
-
-
-}*/
-
-
-
-
+}
