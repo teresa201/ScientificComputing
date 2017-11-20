@@ -40,7 +40,7 @@ for (size_t k=0; k<nvals.size(); k++) {
 
   // evaluate the Lagrange polynomial at the 401 points z, storing in p
   Matrix p(401);
-  for (int i=0; i<n; i++)
+  for (int i=0; i<401; i++)
     p(i) = Lagrange(x, y, z(i));
 
   ofstream fout("fofz.txt", ios::out);
