@@ -53,13 +53,15 @@ SOURCES       = ../SCP3/matrix.cpp \
 		../SCP3/Lagrange.cpp \
 		../SCP3/test_Lagrange.cpp \
 		../SCP3/interpolation_degree.cpp \
-		../SCP3/runge_uniform.cpp 
+		../SCP3/runge_uniform.cpp \
+		../SCP3/runge_chebyshev.cpp 
 OBJECTS       = matrix.o \
 		test_Newton_test.o \
 		Lagrange.o \
 		test_Lagrange.o \
 		interpolation_degree.o \
-		runge_uniform.o
+		runge_uniform.o \
+		runge_chebyshev.o
 DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/unix.conf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/linux.conf \
@@ -163,7 +165,8 @@ DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../SCP3/Lagrange.cpp \
 		../SCP3/test_Lagrange.cpp \
 		../SCP3/interpolation_degree.cpp \
-		../SCP3/runge_uniform.cpp
+		../SCP3/runge_uniform.cpp \
+		../SCP3/runge_chebyshev.cpp
 QMAKE_TARGET  = SCP3
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = SCP3
@@ -450,6 +453,9 @@ interpolation_degree.o: ../SCP3/interpolation_degree.cpp ../SCP3/matrix.hpp
 
 runge_uniform.o: ../SCP3/runge_uniform.cpp ../SCP3/matrix.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o runge_uniform.o ../SCP3/runge_uniform.cpp
+
+runge_chebyshev.o: ../SCP3/runge_chebyshev.cpp ../SCP3/matrix.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o runge_chebyshev.o ../SCP3/runge_chebyshev.cpp
 
 ####### Install
 

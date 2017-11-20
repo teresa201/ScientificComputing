@@ -9,7 +9,8 @@ SOURCES += \
     Lagrange.cpp \
     test_Lagrange.cpp \
     interpolation_degree.cpp \
-    runge_uniform.cpp
+    runge_uniform.cpp \
+    runge_chebyshev.cpp
 
 HEADERS += \
     matrix.hpp

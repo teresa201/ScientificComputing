@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <math.h>
+#include <cmath>
 #include "matrix.hpp"
 #include <fstream>
 
@@ -17,7 +18,7 @@ inline double f(double x){
   return (1/(1 + x*x));
 };
 
-/*int main(){
+int main(){
 // array of n values for testing
 vector<size_t> nvals = {10, 20};
 
@@ -38,64 +39,70 @@ for (size_t k=0; k<nvals.size(); k++) {
   // set evaluation points z as 401 nodes
   //double dx = 1.0/n;                   // set node spacing
  // Matrix z = Linspace(dx/2.0, 1.0-dx/2.0, 401, 1);
-  Matrix z = Linspace(-5.0,5,401);
+ // Matrix z = Linspace(-5.0,5,401);
+  double* zvalues = new double[n+1];
+  for(int k = 0; k < n; k++){
+      zvalues[k] = 5 * cos(((2*k + 1)* M_PI)/(2*n + 2));
+  }
+  Matrix z(1, n+1, zvalues);
 
   // evaluate the Lagrange polynomial at the 401 points z, storing in p
-  Matrix p(401);
-  for (int i=0; i<401; i++)
+  Matrix p(n+1);
+  for (int i=0; i<n+1; i++)
     p(i) = Lagrange(x, y, z(i));
 
   if(n == 10){
-  ofstream fout("rfofz.txt", ios::out);
+  ofstream fout("r1fofz.txt", ios::out);
   if(!fout){
      cout << "Unable to open file" << endl;
   }
-  ofstream pout("rpz.txt", ios::out);
+  ofstream pout("r1pz.txt", ios::out);
   if(!pout){
      cout << "Unable to open file" << endl;
   }
-  ofstream eout("rerr.txt", ios::out);
-  if(!eout){
-     cout << "Unable to open file" << endl;
-  }
+ // ofstream eout("r1err.txt", ios::out);
+ // if(!eout){
+  //   cout << "Unable to open file" << endl;
+ // }
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
-  for (int i=0; i<401; i++){
-    printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
-       z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
+  for (int i=0; i<n+1; i++){
+   // printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
+  //     z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   fout << f(z(i)) << endl;
   pout << p(i) << endl;
-  eout << fabs(f(z(i))-p(i)) << endl;
+ // eout << fabs(f(z(i))-p(i)) << endl;
   }
   fout.close();
   pout.close();
-  eout.close();
+  //eout.close();
   }
   if(n == 20){
-  ofstream f2out("rfofz2.txt", ios::out);
+  ofstream f2out("r1fofz2.txt", ios::out);
   if(!f2out){
      cout << "Unable to open file" << endl;
   }
-  ofstream p2out("rpz2.txt", ios::out);
+  ofstream p2out("r1pz2.txt", ios::out);
   if(!p2out){
      cout << "Unable to open file" << endl;
   }
-  ofstream e2out("rerr2.txt", ios::out);
-  if(!e2out){
-     cout << "Unable to open file" << endl;
-  }
+ // ofstream e2out("rerr2.txt", ios::out);
+ // if(!e2out){
+ //    cout << "Unable to open file" << endl;
+ // }
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
-  for (int i=0; i<401; i++){
-    printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
-       z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
+  for (int i=0; i<n+1; i++){
+   // printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
+   //    z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   f2out << f(z(i)) << endl;
   p2out << p(i) << endl;
-  e2out << fabs(f(z(i))-p(i)) << endl;
+ // e2out << fabs(f(z(i))-p(i)) << endl;
   }
   f2out.close();
   p2out.close();
-  e2out.close();
+ // e2out.close();
   }
 }
-}*/
+}
+
