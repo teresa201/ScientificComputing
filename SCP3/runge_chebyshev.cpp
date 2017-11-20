@@ -31,7 +31,12 @@ for (size_t k=0; k<nvals.size(); k++) {
 
  // Matrix z = Linspace(-5.0,5,401);
   // set arrays of nodes and data values
-  Matrix x = Linspace(-5.0, 5.0, n+1, 1);  // set column vector of nodes
+  double* xvalues = new double[n+1];
+  for(int k = 0; k < n; k++){
+      xvalues[k] = 5 * cos(((2*k + 1)* M_PI)/(2*n + 2));
+  }
+  Matrix x(1, n+1, xvalues);
+  //Matrix x = Linspace(-5.0, 5.0, n+1, 1);  // set column vector of nodes
   Matrix y(n+1);                          // initialize data
   for (int i=0; i<=n; i++)                // fill data
     y(i) = f(x(i));
@@ -39,16 +44,16 @@ for (size_t k=0; k<nvals.size(); k++) {
   // set evaluation points z as 401 nodes
   //double dx = 1.0/n;                   // set node spacing
  // Matrix z = Linspace(dx/2.0, 1.0-dx/2.0, 401, 1);
- // Matrix z = Linspace(-5.0,5,401);
-  double* zvalues = new double[n+1];
+  Matrix z = Linspace(-5.0,5,401);
+ /* double* zvalues = new double[n+1];
   for(int k = 0; k < n; k++){
       zvalues[k] = 5 * cos(((2*k + 1)* M_PI)/(2*n + 2));
   }
-  Matrix z(1, n+1, zvalues);
+  Matrix z(1, n+1, zvalues);*/
 
   // evaluate the Lagrange polynomial at the 401 points z, storing in p
-  Matrix p(n+1);
-  for (int i=0; i<n+1; i++)
+  Matrix p(401);
+  for (int i=0; i<401; i++)
     p(i) = Lagrange(x, y, z(i));
 
   if(n == 10){
@@ -66,7 +71,7 @@ for (size_t k=0; k<nvals.size(); k++) {
  // }
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
-  for (int i=0; i<n+1; i++){
+  for (int i=0; i<401; i++){
    // printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
   //     z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   fout << f(z(i)) << endl;
@@ -92,7 +97,7 @@ for (size_t k=0; k<nvals.size(); k++) {
  // }
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
-  for (int i=0; i<n+1; i++){
+  for (int i=0; i<401; i++){
    // printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
    //    z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   f2out << f(z(i)) << endl;
