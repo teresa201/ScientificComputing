@@ -18,8 +18,15 @@ inline double f(double x){
   return (1/(1 + x*x));
 };
 double Newton_basis(Matrix& xnodes, int k, double x);
+/*double Newton_basis(Matrix& xnodes, int k, double x){
+    double result = 1;
+    for(int i = 0; i < k+1; i++){
+        result *= (x - xnodes(0,i));
+    }
+    return result;
+}*/
 
-int main(){
+/*int main(){
 // array of n values for testing
 vector<size_t> nvals = {10, 20};
 
@@ -44,12 +51,7 @@ for (size_t k=0; k<nvals.size(); k++) {
 
   // set evaluation points z as 401 nodes
 
-  Matrix z = Linspace(-5.0,5,401);
- /* double* zvalues = new double[n+1];
-  for(int k = 0; k < n; k++){
-      zvalues[k] = 5 * cos(((2*k + 1)* M_PI)/(2*n + 2));
-  }
-  Matrix z(1, n+1, zvalues);*/
+  Matrix z = Linspace(-5.0,5.0,401);
 
   // evaluate the Lagrange polynomial at the 401 points z, storing in p
   Matrix p(401);
@@ -58,17 +60,17 @@ for (size_t k=0; k<nvals.size(); k++) {
 
   if(n == 10){
       Matrix xnew = x.T();
-
+      ofstream mout("m1.txt", ios::out);
+      if(!mout){
+         cout << "Unable to open file" << endl;
+      }
           double* mvalues = new double[401];
           for(int k = 0; k < 401; k++){
               mvalues[k] = Newton_basis(xnew,10,z(k));
+              mout << mvalues[k] << endl;
           }
-          Matrix m(1, 401, mvalues);
+          mout.close();
 
-          ofstream mout("m1.txt", ios::out);
-          if(!mout){
-             cout << "Unable to open file" << endl;
-          }
   ofstream fout("r1fofz.txt", ios::out);
   if(!fout){
      cout << "Unable to open file" << endl;
@@ -84,17 +86,17 @@ for (size_t k=0; k<nvals.size(); k++) {
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
   for (int i=0; i<401; i++){
-   // printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
-  //     z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
+    //printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
+    //   x(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   fout << f(z(i)) << endl;
   pout << p(i) << endl;
   eout << fabs(f(z(i))-p(i)) << endl;
-  mout << m(i) << endl;
+
   }
   fout.close();
   pout.close();
   eout.close();
-  mout.close();
+
   }
   if(n == 20){
   ofstream f2out("r1fofz2.txt", ios::out);
@@ -112,8 +114,8 @@ for (size_t k=0; k<nvals.size(); k++) {
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
   for (int i=0; i<401; i++){
-   // printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
-   //    z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
+   //printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
+      // x(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   f2out << f(z(i)) << endl;
   p2out << p(i) << endl;
   e2out << fabs(f(z(i))-p(i)) << endl;
@@ -123,5 +125,5 @@ for (size_t k=0; k<nvals.size(); k++) {
   e2out.close();
   }
 }
-}
+}*/
 
