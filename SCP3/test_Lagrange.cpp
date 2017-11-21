@@ -20,7 +20,7 @@ inline double f(double x){
 };
 
 // This routine tests the function lagrange.cpp
-/*int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
 
   // simple Lambda function for f(x)
 //  auto f = [](const double x) -> double { 
@@ -59,4 +59,4 @@ inline double f(double x){
 	     z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   }
 
-} // end routine*/
+} // end routine

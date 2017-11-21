@@ -6,7 +6,7 @@
 using namespace std;
 double Lagrange(Matrix& x, Matrix& y, double z);
 
-/*int main(){
+int main(){
  double* xvalues = new double[12];
  xvalues[0] = 1885;
  xvalues[1] = 1895;
@@ -63,16 +63,9 @@ double Lagrange(Matrix& x, Matrix& y, double z);
  x1values[9] = 1975;
  x1values[10] = 1985;
  x1values[11] = 1995;
- /*x1values[12] = 1989;
- x1values[13] = 1999;
- x1values[14] = 2009;
- x1values[15] = 1903;
- x1values[16] = 1941;
- x1values[17] = 1963;
- x1values[18] = 1969;
- x1values[19] = 1976;*/
 
- /*delete[] xvalues;
+
+ delete[] xvalues;
  delete[] yvalues;
 
  Matrix x1(12,1,x1values);
@@ -88,18 +81,10 @@ double Lagrange(Matrix& x, Matrix& y, double z);
  y1values[7] = 57.18;
  y1values[8] = 57.12;
  y1values[9] = 57.22;
- y1values[10] = 57.65;*/
- /*y1values[11] = 57.89;
- y1values[12] = 57.69;
- y1values[13] = 57.97;
- y1values[14] = 58.50;
- y1values[15] = 56.71;
- y1values[16] = 57.40;
- y1values[17] = 57.25;
- y1values[18] = 57.20;
- y1values[19] = 56.79;*/
+ y1values[10] = 57.65;
 
-/*
+
+
  Matrix y1(12,1,y1values);
 
  Matrix z1 = Linspace(1885,2015,200);
@@ -112,4 +97,4 @@ double Lagrange(Matrix& x, Matrix& y, double z);
      double res = Lagrange(x1,y1,z1(k));
      eout << res << endl;
  }
-}*/
+}

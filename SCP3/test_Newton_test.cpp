@@ -40,7 +40,7 @@ Matrix Newton_coefficents(Matrix& xnodes, Matrix& ynodes){
     return abegin;
 }
 
-/*int main()
+int main()
 {
    //test Newton Basis, answer should be 24
     double data[4] = {1,2,3,4};
@@ -110,5 +110,5 @@ Matrix Newton_coefficents(Matrix& xnodes, Matrix& ynodes){
 
 
 
-}*/
+}
 

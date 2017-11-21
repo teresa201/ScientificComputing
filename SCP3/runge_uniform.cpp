@@ -19,7 +19,7 @@ inline double f(double x){
 
 double Newton_basis(Matrix& xnodes, int k, double x);
 
-/*int main(){
+int main(){
 // array of n values for testing
 vector<size_t> nvals = {10, 20};
 
@@ -74,8 +74,6 @@ for (size_t k=0; k<nvals.size(); k++) {
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
   for (int i=0; i<401; i++){
-    printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
-       z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   fout << f(z(i)) << endl;
   pout << p(i) << endl;
   eout << fabs(f(z(i))-p(i)) << endl;
@@ -101,8 +99,6 @@ for (size_t k=0; k<nvals.size(); k++) {
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
   for (int i=0; i<401; i++){
-    printf("   %6.3f   %16.13f   %16.13f   %7.2g\n",
-       z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   f2out << f(z(i)) << endl;
   p2out << p(i) << endl;
   e2out << fabs(f(z(i))-p(i)) << endl;
@@ -117,4 +113,4 @@ for (size_t k=0; k<nvals.size(); k++) {
 
 
 
-}*/
+}
