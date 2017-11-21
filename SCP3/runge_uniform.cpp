@@ -17,6 +17,8 @@ inline double f(double x){
   return (1/(1 + x*x));
 };
 
+double Newton_basis(Matrix& xnodes, int k, double x);
+
 int main(){
 // array of n values for testing
 vector<size_t> nvals = {10, 20};
@@ -46,6 +48,16 @@ for (size_t k=0; k<nvals.size(); k++) {
     p(i) = Lagrange(x, y, z(i));
 
   if(n == 10){
+      double* mvalues = new double[401];
+      for(int k = 0; k < 401; k++){
+          mvalues[k] = Newton_basis(x,10,z(k));
+      }
+      Matrix m(1, n+1, mvalues);
+
+  ofstream mout("m.txt", ios::out);
+  if(!mout){
+     cout << "Unable to open file" << endl;
+  }
   ofstream fout("rfofz.txt", ios::out);
   if(!fout){
      cout << "Unable to open file" << endl;
@@ -66,6 +78,7 @@ for (size_t k=0; k<nvals.size(); k++) {
   fout << f(z(i)) << endl;
   pout << p(i) << endl;
   eout << fabs(f(z(i))-p(i)) << endl;
+  mout << m(i) << endl;
   }
   fout.close();
   pout.close();
@@ -92,10 +105,15 @@ for (size_t k=0; k<nvals.size(); k++) {
   f2out << f(z(i)) << endl;
   p2out << p(i) << endl;
   e2out << fabs(f(z(i))-p(i)) << endl;
+
   }
   f2out.close();
   p2out.close();
   e2out.close();
   }
 }
+
+
+
+
 }
