@@ -64,10 +64,10 @@ for (size_t k=0; k<nvals.size(); k++) {
   if(!pout){
      cout << "Unable to open file" << endl;
   }
- // ofstream eout("r1err.txt", ios::out);
- // if(!eout){
-  //   cout << "Unable to open file" << endl;
- // }
+  ofstream eout("r1err.txt", ios::out);
+  if(!eout){
+     cout << "Unable to open file" << endl;
+  }
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
   for (int i=0; i<401; i++){
@@ -75,11 +75,11 @@ for (size_t k=0; k<nvals.size(); k++) {
   //     z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   fout << f(z(i)) << endl;
   pout << p(i) << endl;
- // eout << fabs(f(z(i))-p(i)) << endl;
+  eout << fabs(f(z(i))-p(i)) << endl;
   }
   fout.close();
   pout.close();
-  //eout.close();
+  eout.close();
   }
   if(n == 20){
   ofstream f2out("r1fofz2.txt", ios::out);
@@ -90,10 +90,10 @@ for (size_t k=0; k<nvals.size(); k++) {
   if(!p2out){
      cout << "Unable to open file" << endl;
   }
- // ofstream e2out("rerr2.txt", ios::out);
- // if(!e2out){
- //    cout << "Unable to open file" << endl;
- // }
+  ofstream e2out("rerr2.txt", ios::out);
+  if(!e2out){
+     cout << "Unable to open file" << endl;
+  }
   // output errors at each point
   cout << "      z        f(z)               p(z)             err\n";
   for (int i=0; i<401; i++){
@@ -101,11 +101,11 @@ for (size_t k=0; k<nvals.size(); k++) {
    //    z(i), f(z(i)), p(i), fabs(f(z(i))-p(i)));
   f2out << f(z(i)) << endl;
   p2out << p(i) << endl;
- // e2out << fabs(f(z(i))-p(i)) << endl;
+  e2out << fabs(f(z(i))-p(i)) << endl;
   }
   f2out.close();
   p2out.close();
- // e2out.close();
+  e2out.close();
   }
 }
 }
