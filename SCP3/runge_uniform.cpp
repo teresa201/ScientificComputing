@@ -17,7 +17,7 @@ inline double f(double x){
   return (1/(1 + x*x));
 };
 
-/*int main(){
+int main(){
 // array of n values for testing
 vector<size_t> nvals = {10, 20};
 
@@ -98,4 +98,4 @@ for (size_t k=0; k<nvals.size(); k++) {
   e2out.close();
   }
 }
-}*/
+}

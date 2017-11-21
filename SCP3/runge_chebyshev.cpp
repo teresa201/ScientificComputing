@@ -18,7 +18,7 @@ inline double f(double x){
   return (1/(1 + x*x));
 };
 
-int main(){
+/*int main(){
 // array of n values for testing
 vector<size_t> nvals = {10, 20};
 
@@ -51,7 +51,7 @@ for (size_t k=0; k<nvals.size(); k++) {
   Matrix z(1, n+1, zvalues);*/
 
   // evaluate the Lagrange polynomial at the 401 points z, storing in p
-  Matrix p(401);
+  /*Matrix p(401);
   for (int i=0; i<401; i++)
     p(i) = Lagrange(x, y, z(i));
 
@@ -108,5 +108,5 @@ for (size_t k=0; k<nvals.size(); k++) {
   e2out.close();
   }
 }
-}
+}*/
 
