@@ -17,8 +17,9 @@ double Lagrange(Matrix& x, Matrix& y, double z);
 inline double f(double x){
   return (1/(1 + x*x));
 };
+double Newton_basis(Matrix& xnodes, int k, double x);
 
-/*int main(){
+int main(){
 // array of n values for testing
 vector<size_t> nvals = {10, 20};
 
@@ -51,11 +52,23 @@ for (size_t k=0; k<nvals.size(); k++) {
   Matrix z(1, n+1, zvalues);*/
 
   // evaluate the Lagrange polynomial at the 401 points z, storing in p
-  /*Matrix p(401);
+  Matrix p(401);
   for (int i=0; i<401; i++)
     p(i) = Lagrange(x, y, z(i));
 
   if(n == 10){
+      Matrix xnew = x.T();
+
+          double* mvalues = new double[401];
+          for(int k = 0; k < 401; k++){
+              mvalues[k] = Newton_basis(xnew,10,z(k));
+          }
+          Matrix m(1, 401, mvalues);
+
+          ofstream mout("m1.txt", ios::out);
+          if(!mout){
+             cout << "Unable to open file" << endl;
+          }
   ofstream fout("r1fofz.txt", ios::out);
   if(!fout){
      cout << "Unable to open file" << endl;
@@ -76,10 +89,12 @@ for (size_t k=0; k<nvals.size(); k++) {
   fout << f(z(i)) << endl;
   pout << p(i) << endl;
   eout << fabs(f(z(i))-p(i)) << endl;
+  mout << m(i) << endl;
   }
   fout.close();
   pout.close();
   eout.close();
+  mout.close();
   }
   if(n == 20){
   ofstream f2out("r1fofz2.txt", ios::out);
@@ -108,5 +123,5 @@ for (size_t k=0; k<nvals.size(); k++) {
   e2out.close();
   }
 }
-}*/
+}
 
