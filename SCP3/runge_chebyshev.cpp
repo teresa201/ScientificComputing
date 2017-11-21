@@ -90,7 +90,7 @@ for (size_t k=0; k<nvals.size(); k++) {
   if(!p2out){
      cout << "Unable to open file" << endl;
   }
-  ofstream e2out("rerr2.txt", ios::out);
+  ofstream e2out("r1err2.txt", ios::out);
   if(!e2out){
      cout << "Unable to open file" << endl;
   }
