@@ -19,7 +19,7 @@ inline double f(double x){
 
 double Newton_basis(Matrix& xnodes, int k, double x);
 
-/*int main(){
+int main(){
 // array of n values for testing
 vector<size_t> nvals = {10, 20};
 
@@ -117,4 +117,4 @@ for (size_t k=0; k<nvals.size(); k++) {
 
 
 
-}*/
+}
