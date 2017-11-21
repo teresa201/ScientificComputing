@@ -37,7 +37,7 @@ int main(){
  yvalues[10] = 57.65;
  yvalues[11] = 57.89;
 
- Matrix y(12,1,xvalues);
+ Matrix y(12,1,yvalues);
 
  Matrix z = Linspace(1885,1995,200);
 
