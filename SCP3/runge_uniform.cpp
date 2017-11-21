@@ -47,12 +47,13 @@ for (size_t k=0; k<nvals.size(); k++) {
   for (int i=0; i<401; i++)
     p(i) = Lagrange(x, y, z(i));
 
+  Matrix xnew = x.T();
   if(n == 10){
       double* mvalues = new double[401];
       for(int k = 0; k < 401; k++){
-          mvalues[k] = Newton_basis(x,10,z(k));
+          mvalues[k] = Newton_basis(xnew,10,z(k));
       }
-      Matrix m(1, n+1, mvalues);
+      Matrix m(1, 401, mvalues);
 
   ofstream mout("m.txt", ios::out);
   if(!mout){
