@@ -49,4 +49,48 @@ int main(){
      double res = Lagrange(x,y,z(k));
      fout << res << endl;
  }
+
+ double* x1values = new double[20];
+ x1values[0] = 1885;
+ x1values[1] = 1895;
+ x1values[2] = 1905;
+ x1values[3] = 1915;
+ x1values[4] = 1925;
+ x1values[5] = 1935;
+ x1values[6] = 1945;
+ x1values[7] = 1955;
+ x1values[8] = 1965;
+ x1values[9] = 1975;
+ x1values[10] = 1985;
+ x1values[11] = 1995;
+
+
+ Matrix x1(12,1,x1values);
+
+ double* y1values = new double[12];
+ y1values[0] = 56.7;
+ y1values[1] = 56.72;
+ y1values[2] = 56.87;
+ y1values[3] = 56.89;
+ y1values[4] = 57.01;
+ y1values[5] = 57.21;
+ y1values[6] = 57.28;
+ y1values[7] = 57.18;
+ y1values[8] = 57.12;
+ y1values[9] = 57.22;
+ y1values[10] = 57.65;
+ y1values[11] = 57.89;
+
+ Matrix y1(12,1,y1values);
+
+ Matrix z1 = Linspace(1885,2015,200);
+
+ ofstream eout("app1.txt", ios::out);
+ if(!fout){
+    cout << "Unable to open file" << endl;
+ }
+ for(int k = 0; k < 200; k++){
+     double res = Lagrange(x1,y1,z1(k));
+     eout << res << endl;
+ }
 }
