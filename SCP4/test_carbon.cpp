@@ -16,13 +16,13 @@ double carbon(const double x, const double t);
 double erf(const double y,const int n);
 
 int main(){
-   Matrix x = Linspace(0,3,200); //3 is in mm
+   Matrix x = Linspace(0,.003,200); //3 is in mm
    ofstream fout("t1.txt", ios::out);
    if(!fout){
       cout << "Unable to open file" << endl;
    }
    for(int k = 0; k < 200; k++){
-       double t = 1.0;
+       double t = 3600.0;
        fout << carbon(x(k), t) << endl;
    }
    fout.close();
@@ -31,7 +31,7 @@ int main(){
       cout << "Unable to open file" << endl;
    }
    for(int k = 0; k < 200; k++){
-       double t = 2.0;
+       double t = 7200.0;
        gout << carbon(x(k), t) << endl;
    }
    gout.close();
@@ -40,7 +40,7 @@ int main(){
       cout << "Unable to open file" << endl;
    }
    for(int k = 0; k < 200; k++){
-       double t = 10.0;
+       double t = 36000.0;
        hout << carbon(x(k), t) << endl;
    }
    hout.close();
@@ -49,7 +49,7 @@ int main(){
       cout << "Unable to open file" << endl;
    }
    for(int k = 0; k < 200; k++){
-       double t = 40.0;
+       double t = 144000.0;
        iout << carbon(x(k), t) << endl;
    }
    iout.close();
