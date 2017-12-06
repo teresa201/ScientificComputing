@@ -7,13 +7,13 @@
 #include "fcn.hpp"
 #include <fstream>
 #include <vector>
-using namespace std;
+/*using namespace std;
 class fcn : public Fcn {
-public:
-/*  double operator()(double x) {   // function evaluation
+public:*/
+ /*double operator()(double x) {   // function evaluation
       return (6 * pow(x,2) - 4 * x + 1);
   }*/
-  double operator()(double x) {   // function evaluation
+ /* double operator()(double x) {   // function evaluation
     return (exp(x)*sin(M_PI*x));
   }
   double antiderivative(double x) { // function evaluation
@@ -25,7 +25,7 @@ public:
 double composite_trapezodial(Fcn& f, const double a,
                              const double b, const int n){
     double h = (b - a)/n;
-    double sum = (f(a) + f(b))/h;
+    double sum = (f(a) + f(b))/2;
     for (int k = 1; k < n; k++){
         double x = a + k * h;
         sum = sum + f(x);
@@ -46,29 +46,29 @@ double composite_Simpson(Fcn& f, const double a,
             x2 = x2 + f(x);
         }
         else{
-            x1 = x1 = f(x);
+            x1 = x1 + f(x);
         }
     }
     double xi = (h * (x0 + 2 * x2 + 4 * x1))/3;
     return xi;
 
-}
+}*/
 
-int main()
+/*int main()
 {
-    /*fcn f;
+    fcn f;
     double actual = 15;
-    double result = composite_trapezodial(f,-1,2,3);
+    double result = composite_trapezodial(f,-1,2,10);
     cout << "Composite Trapezodial:" << result << endl;
     cout << "Error:" << abs(actual - result) << endl;
-    double result1 = composite_Simpson(f,-1,2,4);
+    double result1 = composite_Simpson(f,-1,2,10);
     cout << "Composite Simpson:" << result1 << endl;
-    cout << "Error:" << abs(actual - result1) << endl;*/
-
+    cout << "Error:" << abs(actual - result1) << endl;
+*/
 
 
     // limits of integration
-    double a = -1.0;
+ /*   double a = -1.0;
     double b = 1.0;
 
     // integrand
@@ -109,5 +109,5 @@ int main()
     cout << "  ---------------------------------------------------\n";
 
 
-}
+}*/
 

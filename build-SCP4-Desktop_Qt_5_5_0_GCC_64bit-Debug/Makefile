@@ -50,10 +50,16 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../SCP4/test_basic_rules.cpp \
 		../SCP4/composite_Gauss2.cpp \
-		../SCP4/test_Gauss2.cpp 
+		../SCP4/test_Gauss2.cpp \
+		../SCP4/carbon.cpp \
+		../SCP4/test_carbon.cpp \
+		../SCP4/matrix.cpp 
 OBJECTS       = test_basic_rules.o \
 		composite_Gauss2.o \
-		test_Gauss2.o
+		test_Gauss2.o \
+		carbon.o \
+		test_carbon.o \
+		matrix.o
 DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/unix.conf \
 		../../../Qt/5.5/gcc_64/mkspecs/common/linux.conf \
@@ -152,9 +158,13 @@ DIST          = ../../../Qt/5.5/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/features/exceptions.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/features/yacc.prf \
 		../../../Qt/5.5/gcc_64/mkspecs/features/lex.prf \
-		../SCP4/SCP4.pro fcn.hpp ../SCP4/test_basic_rules.cpp \
+		../SCP4/SCP4.pro fcn.hpp \
+		matrix.hpp ../SCP4/test_basic_rules.cpp \
 		../SCP4/composite_Gauss2.cpp \
-		../SCP4/test_Gauss2.cpp
+		../SCP4/test_Gauss2.cpp \
+		../SCP4/carbon.cpp \
+		../SCP4/test_carbon.cpp \
+		../SCP4/matrix.cpp
 QMAKE_TARGET  = SCP4
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = SCP4
@@ -432,6 +442,16 @@ composite_Gauss2.o: ../SCP4/composite_Gauss2.cpp ../SCP4/fcn.hpp
 
 test_Gauss2.o: ../SCP4/test_Gauss2.cpp ../SCP4/fcn.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o test_Gauss2.o ../SCP4/test_Gauss2.cpp
+
+carbon.o: ../SCP4/carbon.cpp ../SCP4/fcn.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o carbon.o ../SCP4/carbon.cpp
+
+test_carbon.o: ../SCP4/test_carbon.cpp ../SCP4/fcn.hpp \
+		../SCP4/matrix.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o test_carbon.o ../SCP4/test_carbon.cpp
+
+matrix.o: ../SCP4/matrix.cpp ../SCP4/matrix.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o matrix.o ../SCP4/matrix.cpp
 
 ####### Install
 
