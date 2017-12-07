@@ -15,7 +15,7 @@ using namespace std;
 double carbon(const double x, const double t);
 double erf(const double y,const int n);
 
-/*int main(){
+int main(){
    Matrix x = Linspace(0,.003,200); //3 is in mm
    ofstream fout("t1.txt", ios::out);
    if(!fout){
@@ -56,4 +56,4 @@ double erf(const double y,const int n);
 
 
 
-}*/
+}
