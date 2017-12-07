@@ -7,19 +7,34 @@
 #include "fcn.hpp"
 #include <fstream>
 #include <vector>
-/*using namespace std;
+using namespace std;
 class fcn : public Fcn {
-public:*/
- /*double operator()(double x) {   // function evaluation
-      return (6 * pow(x,2) - 4 * x + 1);
-  }*/
- /* double operator()(double x) {   // function evaluation
-    return (exp(x)*sin(M_PI*x));
-  }
-  double antiderivative(double x) { // function evaluation
+public:
+    bool first;
+
+    double operator()(double x) {   // function evaluation
+        if(first){
+          return (6 * pow(x,2) - 4 * x + 1);
+        }
+        else{
+          return (exp(x)*sin(M_PI*x));
+        }
+    }
+     double antiderivative(double x) { // function evaluation
+        return -(exp(x)*(M_PI * cos(M_PI*x) - sin(M_PI*x)))/(1 + M_PI * M_PI);
+      }
+
+
+
+   /* else{
+    double operator()(double x) {   // function evaluation
+        return (exp(x)*sin(M_PI*x));
+    }
+    double antiderivative(double x) { // function evaluation
     //return (M_PI* (exp(1) - ((1)/ exp(1))))/(1 + M_PI * M_PI);
       return -(exp(x)*(M_PI * cos(M_PI*x) - sin(M_PI*x)))/(1 + M_PI * M_PI);
-  }
+    }
+    }*/
 };
 
 double composite_trapezodial(Fcn& f, const double a,
@@ -52,11 +67,12 @@ double composite_Simpson(Fcn& f, const double a,
     double xi = (h * (x0 + 2 * x2 + 4 * x1))/3;
     return xi;
 
-}*/
+}
 
-/*int main()
+int main()
 {
     fcn f;
+    f.first = true;
     double actual = 15;
     double result = composite_trapezodial(f,-1,2,10);
     cout << "Composite Trapezodial:" << result << endl;
@@ -64,15 +80,16 @@ double composite_Simpson(Fcn& f, const double a,
     double result1 = composite_Simpson(f,-1,2,10);
     cout << "Composite Simpson:" << result1 << endl;
     cout << "Error:" << abs(actual - result1) << endl;
-*/
+
 
 
     // limits of integration
- /*   double a = -1.0;
+    double a = -1.0;
     double b = 1.0;
 
     // integrand
     fcn f1;
+    f1.first = false;
     //f.c = 0.5;
    // f.d = 25.0;
 
@@ -109,5 +126,5 @@ double composite_Simpson(Fcn& f, const double a,
     cout << "  ---------------------------------------------------\n";
 
 
-}*/
+}
 
